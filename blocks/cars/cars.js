@@ -1,9 +1,10 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
-  const carCard = document.querySelector(".car.block");
+  const carCard = document.querySelector(".cars.block");
 
-  carCard.addEventListener("click", function () {
-    alert("You clicked Jaguar car!");
+  carCard.addEventListener("click", () => {
+    const carName = carCard.querySelector("p").textContent;
+    alert("You selected: " + carName);
   });
 
 });
