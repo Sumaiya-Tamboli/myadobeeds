@@ -1,0 +1,83 @@
+.carousel-container {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.carousel.slider {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Track */
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+/* Each slide */
+.carousel-track > div {
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+/* Image */
+.carousel picture,
+.carousel img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Content */
+.carousel h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.carousel p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Buttons */
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #000;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.carousel-nav:hover {
+  opacity: 1;
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .carousel-track > div {
+    grid-template-columns: 1fr;
+  }
+
+  .carousel h2 {
+    font-size: 22px;
+  }
+}
